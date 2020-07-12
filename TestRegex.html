@@ -1,0 +1,38 @@
+<html>
+	<script>
+		debugger;
+		html = '<h1>Alan Turing: 100 anos</h1><div>100</div>';
+		res = html.match('<.+>'); // pega todo tag
+		xes = html.match('<.[div].+>') // pega todo conteudo da tag div
+		var html = "<div>100</div><h1>Alan Turing: 100 anos</h1><div class='none'>200</div>";
+		var resu = html.match(("<.+>")); // pega todo tag
+		var xes = html.match(('<.[div].+>')); // pega todo conteudo da tag div
+		var c = html.match((/<div.+?div>/gms));
+		var none = html.match(/<div [class="none"].+?div>/);
+		var str = "The rain in SPAIN stays mainly in the plain"; 
+		var b = str.match(/ain/gi);
+		//[012]\d:[0-5]\d
+		console.log(res);
+		console.log(resu);
+		console.log(xes);
+		console.log(c);
+		console.log(b);
+		console.log(none);
+		//<div.+?</div> pegar divs
+		//<div.+?div>
+		//<div class='none'.+?div>
+
+
+		var alvo = '11a22b33c';
+		var exp = new RegExp('\\d\\d\\w', 'gms');
+		var resultado = exp.exec(alvo);
+		console.log(resultado);
+		console.log(exp.lastIndex);
+
+		var ex = /(\d\d)(\w)/g;
+		while(result = ex.exec(alvo)){
+			console.log(result);
+		}
+		
+	</script>
+</html>
